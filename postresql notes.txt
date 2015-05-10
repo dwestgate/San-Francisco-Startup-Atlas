@@ -1,0 +1,26 @@
+Postgresql
+==========
+postgres -D /usr/local/var/postgres
+
+
+To have launchd start postgresql at login:
+    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+Then to load postgresql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+Or, if you don't want/need launchctl, you can just run:
+    postgres -D /usr/local/var/postgres
+
+Configuration
+=============
+createdb `whoami`
+
+
+To open the postgres cli: psql
+To quit: \q
+
+To create a new database from regular cli: createdb StartupAtlas
+
+SHOW DATA_DIRECTORY;
+
+
+http://www.mchange.com/projects/c3p0/index.html#basic_pool_configuration

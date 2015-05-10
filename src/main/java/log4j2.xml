@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Status determines which log4j log messages are included. -->
+<!-- Logging levels are: TRACE, DEBUG, INFO, WARN, ERROR, and FATAL -->
+<Configuration status="WARN">
+	<Appenders>
+		<!-- We can make the console output more user-friendly if we want. -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%m%n">
+			</PatternLayout>
+		</Console>
+
+		<!-- We can still keep details in a file log for debugging. -->
+		<File name="FileLog" fileName="debug.log" append="false">
+			<PatternLayout
+				pattern="%date{HH:mm:ss:SSS} [%-5level{lowerCase=true}] %file:%line: %m%n">
+			</PatternLayout>
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<!-- You can modify per-class logging levels if you want. -->
+        <Logger name="Driver" additivity="false">
+            <!-- <AppenderRef ref="Console" level="DEBUG" /> -->
+            <!-- <AppenderRef ref="FileLog" level="DEBUG" /> -->
+        </Logger>
+ 
+        <Logger name="ReadWriteLock" additivity="false">
+            <!-- <AppenderRef ref="Console" level="DEBUG" /> -->
+            <!-- <AppenderRef ref="FileLog" level="DEBUG" /> -->
+        </Logger>
+
+        <Logger name="WorkQueue" additivity="false">
+            <!-- <AppenderRef ref="Console" level="DEBUG" /> -->
+            <!-- <AppenderRef ref="FileLog" level="DEBUG" /> -->
+        </Logger>
+ 
+        <Logger name="Worker" additivity="false">
+            <!-- <AppenderRef ref="Console" level="DEBUG" /> -->
+            <!-- <AppenderRef ref="FileLog" level="DEBUG" /> -->
+        </Logger>
+
+		<!-- This is the configuration used by all other loggers. -->
+		<Root level="ALL">
+			<!-- <AppenderRef ref="Console" level="INFO" /> -->
+			<!-- <AppenderRef ref="FileLog" level="ALL"  /> -->
+		</Root>
+	</Loggers>
+</Configuration>
