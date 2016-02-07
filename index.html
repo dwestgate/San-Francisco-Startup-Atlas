@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>San Francisco Startup Atlas by dwestgate</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/dwestgate/San-Francisco-Startup-Atlas">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/dwestgate/San-Francisco-Startup-Atlas/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/dwestgate/San-Francisco-Startup-Atlas/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>San Francisco Startup Atlas</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/dwestgate">dwestgate</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="san-francisco-startup-atlas" class="anchor" href="#san-francisco-startup-atlas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>San Francisco Startup Atlas</h1>
+
+<h3>
+<a id="warning-this-application-is-populated-with-test-data" class="anchor" href="#warning-this-application-is-populated-with-test-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WARNING: THIS APPLICATION IS POPULATED WITH TEST DATA</h3>
+
+<p>The application has been designed to illustrate functionality and has been populated with invented data and relationships to accomplish this purpose. While CrunchBase data and City of San Francisco location data has served as a starting point, the data in the application differs from these starting sources significantly (and not in a good way!).</p>
+
+<h3>
+<a id="testing-the-application" class="anchor" href="#testing-the-application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing the application</h3>
+
+<h4>
+<a id="launching-the-application" class="anchor" href="#launching-the-application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Launching the application</h4>
+
+<p>Launch the application using JettyRunner: http://localhost:8080/search</p>
+
+<p>The application uses Google Maps, and the Google API key will only permit access when using the above address.</p>
+
+<h4>
+<a id="test-queries" class="anchor" href="#test-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test queries</h4>
+
+<p>The application will only produce results on exact matches.</p>
+
+<p>The easiest way to get test data is to start off by querying a San Francisco zipcode where there happen to be many startups. PLEASE REMEMBER THAT THE DATA AND RELATIONSHIPS ARE NOT IN ANY WAY ACCURATE.</p>
+
+<p>Here are some sample search terms for which the database has information:</p>
+
+<ul>
+<li>
+<p>Startup Name Searches</p>
+
+<ul>
+<li>Zynga</li>
+<li>AKQA</li>
+<li>Twitter</li>
+</ul>
+</li>
+<li>
+<p>Investor Name Searches</p>
+
+<ul>
+<li>AdTonik</li>
+<li>Aduro Advisors</li>
+<li>Aedeas Group</li>
+<li>AGC</li>
+</ul>
+</li>
+<li>
+<p>Zipcode Searches</p>
+
+<ul>
+<li>94103</li>
+<li>94107</li>
+<li>94114</li>
+</ul>
+</li>
+<li>
+<p>Searches on Individuals</p>
+
+<ul>
+<li>Andrew Kent</li>
+<li>Steven Willmott</li>
+<li>Patrick Sullivan</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>The San Francisco Startup Atlas is a web application that tracks startup activity in San Francisco by plotting the location of startup companies on a map of the city. The intent is to illuminate the nexus between startups as logical/financial entities and their physical manifestations in terms of office space.</p>
+
+<h3>
+<a id="interface" class="anchor" href="#interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interface</h3>
+
+<p>The application provides a simple interface that allows searching for startup companies based on a variety of criteria. The results are plotted on a Google map. Information on particular startups can be viewed by clicking on its map icon.</p>
+
+<p><img src="San-Francisco-Startup-Atlas.png" alt="Web Interface"></p>
+
+<h3>
+<a id="information-accessible-via-the-atlas" class="anchor" href="#information-accessible-via-the-atlas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Information accessible via the Atlas</h3>
+
+<p>In addition to physical location, the application provides details regarding each startup's funding. The names of principals, founders, and investors can also be used as a starting point for searches.</p>
+
+<h3>
+<a id="historical-information" class="anchor" href="#historical-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Historical information</h3>
+
+<p>The application contains data on past startups as well as present-day startups.</p>
+
+<h3>
+<a id="intended-use" class="anchor" href="#intended-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Intended use</h3>
+
+<p>The San Francisco Startup Atlas is intended to serve two primary purposes:</p>
+
+<ul>
+<li>Assisting those who, for practical reasons, are interested in the physical dimensions of San Francisco's startup scene: local tourists, job-seekers, or residents of San Francisco wanting to know more about their neighbors</li>
+<li>Providing those who may have no practical need for the data with a tool that will prove mildly diverting for the period of an extended sojourn to the restroom</li>
+</ul>
+
+<h3>
+<a id="foundational-use-cases" class="anchor" href="#foundational-use-cases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Foundational use-cases</h3>
+
+<p>The following are some core use-cases around which the San Francisco Startup Atlas is being developed:</p>
+
+<ol>
+<li>You go out one morning and find that the run-down warehouse on the corner is suddenly blanketed in trendy landscaping and surveillance cameras. By punching in the zipcode you should be able to quickly determine whether you have a new startup on your hands, or just another grow-op.</li>
+<li>You are looking for a new gig and have heard of a company called Zynga. You want to be able to see where in the city they are located.</li>
+<li>You hear of a new venture capital firm and are interested in seeing how widely they have invested with startups in San Francisco.</li>
+<li>You meet an entrpreneur/founder who says he has been involved with lots of startups. You are interested in seeing exactly which startups he has been involved with and where in the city.</li>
+</ol>
+
+<h3>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h3>
+
+<p>This application is being developed as a class project for cs333 at University of San Francisco, taught by EJ Jung.</p>
+
+<h2>
+<a id="technology-overview" class="anchor" href="#technology-overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technology Overview</h2>
+
+<p>The San Francisco Startup Atlas is built with the following technology components:</p>
+
+<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java 8</a></li>
+<li>Web front-end:
+
+<ul>
+<li><a href="http://www.eclipse.org/jetty/">Jetty</a></li>
+<li><a href="http://getbootstrap.com/">BootStrap</a></li>
+</ul>
+</li>
+<li><a href="http://www.postgresql.org/">PostgreSQL database</a></li>
+</ul>
+
+<h1>
+<a id="the-san-francisco-startup-atlas-database" class="anchor" href="#the-san-francisco-startup-atlas-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The San Francisco Startup Atlas Database</h1>
+
+<h2>
+<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Sources</h2>
+
+<p>Some of the data used by The San Francisco Startup Atlas has been extracted from <a href="https://www.crunchbase.com/">CrunchBase</a>. Taken as a whole, the data consists of approximately 10,000 records. Approximately one quarter of the database entries represent startup companies, with the rest representing funding entities, details on funding rounds, addresses, and individuals.</p>
+
+<p>Thanks to everyone at <a href="https://www.crunchbase.com/">CrunchBase</a> for making this data publicly available!</p>
+
+<p>Address and geolocation information has been extracted from data made available by the city of San Francisco.</p>
+
+<h2>
+<a id="database-structure" class="anchor" href="#database-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Database Structure</h2>
+
+<h3>
+<a id="entity-relationship-diagram" class="anchor" href="#entity-relationship-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entity Relationship Diagram</h3>
+
+<p><img src="ERD.png" alt="ERD"></p>
+
+<h3>
+<a id="relational-schema" class="anchor" href="#relational-schema" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Relational Schema</h3>
+
+<p><img src="schema.png" alt="Schema"></p>
+
+<h3>
+<a id="indexes" class="anchor" href="#indexes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Indexes</h3>
+
+<p>As data is entered into the database irregularly and by batch, speed of lookup is the primary driver for indexing.</p>
+
+<p>Most lookups for this application are equality lookups: we are searching for specific startups that meet certain criteria, then populate their attributes based on equality relationships. For this reason most indexes will be hash indexes. The exception here is with regards to addresses and people: columns in these tables are indexed using B+ tree indexes to facilitate range searches.</p>
+
+<p>The database used for this application is PostgreSQL, which automatically indexes all primary keys and all columns with unique constraints. The default PostgreSQL indexing method is B+ tree. By default, PostgreSQL's automatic indexing is not be case insensitive. The 'citext' extension has been applied to the database so that these indexes will behave in a case-insensitive manner, and all text fields have been defined as citext.</p>
+
+<h4>
+<a id="index-costs" class="anchor" href="#index-costs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Index costs</h4>
+
+<ul>
+<li>B+ Tree Index (PostgreSQL default)
+
+<ul>
+<li>Equality Search: D(1+logF 0.15B)</li>
+<li>Range Search: D(LogF 0.15B + number of matching records)</li>
+</ul>
+</li>
+<li>Hash Index
+
+<ul>
+<li>Equality Search: 2D</li>
+<li>Range Search: BD</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="table-sizes" class="anchor" href="#table-sizes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table sizes</h3>
+
+<ul>
+<li>addresses (83,609 records)</li>
+<li>employed_at (7,835 records)</li>
+<li>funding_rounds (13,560 records)</li>
+<li>investors (401 records)</li>
+<li>located_at (2,225 records)</li>
+<li>organizations (7,216 records)</li>
+<li>people (7,835 records)</li>
+<li>startups (6,780 records)</li>
+</ul>
+
+<h4>
+<a id="created-indexes" class="anchor" href="#created-indexes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Created Indexes</h4>
+
+<ul>
+<li>
+<p>addresses</p>
+
+<ul>
+<li>zipcode (B+ tree)</li>
+<li>latitude (B+ tree)</li>
+<li>longitude (B+ tree)</li>
+</ul>
+</li>
+<li>
+<p>located_at</p>
+
+<ul>
+<li>startup (hash)</li>
+</ul>
+</li>
+<li>
+<p>people</p>
+
+<ul>
+<li>first_name (B+ tree)</li>
+<li>last_name (B+ tree)</li>
+<li>alma_mata (B+ tree)</li>
+</ul>
+</li>
+<li>
+<p>employed_at</p>
+
+<ul>
+<li>name (hash)</li>
+<li>people_id (hash)</li>
+</ul>
+</li>
+<li>
+<p>funding_rounds</p>
+
+<ul>
+<li>startup (hash)</li>
+<li>investor (hash)</li>
+</ul>
+</li>
+<li>
+<p>investors</p>
+
+<ul>
+<li>name (hash)</li>
+</ul>
+</li>
+<li>
+<p>startups</p>
+
+<ul>
+<li>name (hash)</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="sql-queries" class="anchor" href="#sql-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQL Queries</h3>
+
+<h4>
+<a id="table-creation-queries" class="anchor" href="#table-creation-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table Creation Queries</h4>
+
+<p>The queries necessary to create and the database and populate it with data from .csv files is located in the <a href="/create_db.sql/">create_db.sql</a> file.</p>
+
+<h4>
+<a id="test-data" class="anchor" href="#test-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test Data</h4>
+
+<p>CSV files containing test data have been created for each table:</p>
+
+<ul>
+<li>AcquiredBy table: <a href="/AcquiredBy.csv/">AcquiredBy.csv</a>
+</li>
+<li>Addresses table: <a href="/Addresses.csv/">Addresses.csv</a>
+</li>
+<li>EmployedAt table: <a href="/EmployedAt.csv/">EmployedAt.csv</a>
+</li>
+<li>FundingRounds table: <a href="/FundingRounds.csv/">FundingRounds.csv</a>
+</li>
+<li>Investors table: <a href="/Investors.csv/">Investors.csv</a>
+</li>
+<li>LocatedAt table: <a href="/LocatedAt.csv/">LocatedAt.csv</a>
+</li>
+<li>Organizations table: <a href="/Organizations.csv/">Organizations.csv</a>
+</li>
+<li>People table: <a href="/People.csv/">People.csv</a>
+</li>
+<li>Startups table: <a href="/Startups.csv/">Startups.csv</a>
+</li>
+</ul>
+
+<h4>
+<a id="functionality-queries" class="anchor" href="#functionality-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functionality Queries</h4>
+
+<p>The following queries support the application's core functionality and are contained in the <a href="/application_queries.sql/">application_queries.sql</a> file.</p>
+
+<h5>
+<a id="validation-query" class="anchor" href="#validation-query" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validation query</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> table_name <span class="pl-k">FROM</span> <span class="pl-c1">information_schema</span>.<span class="pl-c1">tables</span> <span class="pl-k">WHERE</span> table_schema <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>;</pre></div>
+
+<h5>
+<a id="given-a-startup-zipcode-find-startups-in-that-zipcode" class="anchor" href="#given-a-startup-zipcode-find-startups-in-that-zipcode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Given a startup zipcode, find startups in that zipcode</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">count</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> rounds,
+  <span class="pl-c1">sum</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> total_funding
+<span class="pl-k">from</span> startups
+  <span class="pl-k">join</span> located_at <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">startup</span>
+  <span class="pl-k">join</span> addresses <span class="pl-k">on</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">street_address</span> <span class="pl-k">=</span> <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>
+  <span class="pl-k">join</span> funding_rounds <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">funding_rounds</span>.<span class="pl-c1">startup</span>
+<span class="pl-k">where</span> <span class="pl-c1">addresses</span>.<span class="pl-c1">zipcode</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>94107<span class="pl-pds">'</span></span>
+<span class="pl-k">group by</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>;</pre></div>
+
+<h5>
+<a id="given-a-startup-name-find-the-current-location-of-that-startup" class="anchor" href="#given-a-startup-name-find-the-current-location-of-that-startup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Given a startup name, find the current location of that startup</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">count</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> rounds,
+  <span class="pl-c1">sum</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> total_funding
+<span class="pl-k">from</span> startups
+  <span class="pl-k">join</span> located_at <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">startup</span>
+  <span class="pl-k">join</span> addresses <span class="pl-k">on</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">street_address</span> <span class="pl-k">=</span> <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>
+  <span class="pl-k">join</span> funding_rounds <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">funding_rounds</span>.<span class="pl-c1">startup</span>
+<span class="pl-k">where</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Yelp<span class="pl-pds">'</span></span>
+<span class="pl-k">group by</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>;</pre></div>
+
+<h5>
+<a id="given-the-name-of-an-individual-list-all-startups-heshe-has-been-involved-with" class="anchor" href="#given-the-name-of-an-individual-list-all-startups-heshe-has-been-involved-with" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Given the name of an individual, list all startups he/she has been involved with</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">count</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> rounds,
+  <span class="pl-c1">sum</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> total_funding,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">role</span>,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">from_date</span>,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">to_date</span>
+<span class="pl-k">from</span> employed_at
+  <span class="pl-k">join</span> people <span class="pl-k">on</span> <span class="pl-c1">people</span>.<span class="pl-c1">id</span> <span class="pl-k">=</span> <span class="pl-c1">employed_at</span>.<span class="pl-c1">people_id</span>
+  <span class="pl-k">join</span> startups <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">employed_at</span>.<span class="pl-c1">name</span>
+  <span class="pl-k">join</span> located_at <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">startup</span>
+  <span class="pl-k">join</span> addresses <span class="pl-k">on</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">street_address</span> <span class="pl-k">=</span> <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>
+  <span class="pl-k">join</span> funding_rounds <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">funding_rounds</span>.<span class="pl-c1">startup</span>
+<span class="pl-k">where</span> <span class="pl-c1">people</span>.<span class="pl-c1">first_name</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>Bob<span class="pl-pds">'</span></span> <span class="pl-k">and</span>
+      <span class="pl-c1">people</span>.<span class="pl-c1">last_name</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>Goodson<span class="pl-pds">'</span></span>
+<span class="pl-k">group by</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">role</span>,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">from_date</span>,
+  <span class="pl-c1">employed_at</span>.<span class="pl-c1">to_date</span>;</pre></div>
+
+<h5>
+<a id="given-the-name-of-an-investor-list-all-the-startups-invested-in" class="anchor" href="#given-the-name-of-an-investor-list-all-the-startups-invested-in" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Given the name of an investor, list all the startups invested in</h5>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">select</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">count</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> rounds,
+  <span class="pl-c1">sum</span>(<span class="pl-c1">funding_rounds</span>.<span class="pl-c1">amount</span>) <span class="pl-k">as</span> total_funding,
+  <span class="pl-c1">investors</span>.<span class="pl-c1">name</span>
+<span class="pl-k">from</span> investors
+  <span class="pl-k">join</span> funding_rounds <span class="pl-k">on</span> <span class="pl-c1">funding_rounds</span>.<span class="pl-c1">investor</span> <span class="pl-k">=</span> <span class="pl-c1">investors</span>.<span class="pl-c1">name</span>
+  <span class="pl-k">join</span> startups <span class="pl-k">on</span> <span class="pl-c1">funding_rounds</span>.<span class="pl-c1">startup</span> <span class="pl-k">=</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>
+  <span class="pl-k">join</span> located_at <span class="pl-k">on</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">startup</span>
+  <span class="pl-k">join</span> addresses <span class="pl-k">on</span> <span class="pl-c1">located_at</span>.<span class="pl-c1">street_address</span> <span class="pl-k">=</span> <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>
+<span class="pl-k">where</span> <span class="pl-c1">investors</span>.<span class="pl-c1">name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Angelrush Ventures<span class="pl-pds">'</span></span>
+<span class="pl-k">group by</span> <span class="pl-c1">startups</span>.<span class="pl-c1">name</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">vertical</span>,
+  <span class="pl-c1">startups</span>.<span class="pl-c1">since</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">street_address</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">latitude</span>,
+  <span class="pl-c1">addresses</span>.<span class="pl-c1">longitude</span>,
+  <span class="pl-c1">investors</span>.<span class="pl-c1">name</span>;</pre></div>
+
+<h2>
+<a id="development-tools" class="anchor" href="#development-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development Tools</h2>
+
+<p>The following development tools were used in creating this project:</p>
+
+<ul>
+<li><a href="https://atom.io/">Atom</a></li>
+<li><a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a></li>
+<li><a href="https://www.omnigroup.com/omnigraffle/">OmniGraffle for Mac</a></li>
+</ul>
+
+<h2>
+<a id="about-the-developer" class="anchor" href="#about-the-developer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About the Developer</h2>
+
+<p>David Westgate is a Computer Science student at University of San Francisco.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Distributed under the <a href="/LICENSE.md/">MIT License</a>.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
